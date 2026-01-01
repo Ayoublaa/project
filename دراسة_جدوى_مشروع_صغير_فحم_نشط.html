@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دراسة جدوى مشروع صغير - الفحم النشط</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Tajawal', sans-serif; background: #f5f5f5; color: #333; line-height: 1.7; }
+        .container { max-width: 800px; margin: 0 auto; background: white; }
+        
+        .header { background: linear-gradient(135deg, #2E7D32, #66BB6A); color: white; padding: 40px; text-align: center; }
+        .header h1 { font-size: 1.8rem; margin-bottom: 10px; }
+        .header h2 { font-size: 1.2rem; font-weight: 400; opacity: 0.9; }
+        .header .badge { background: #FFB300; color: #333; padding: 8px 20px; border-radius: 20px; display: inline-block; margin-top: 15px; font-weight: 700; }
+        
+        .content { padding: 30px; }
+        
+        .summary-box { background: linear-gradient(135deg, #1B5E20, #388E3C); color: white; padding: 25px; border-radius: 15px; margin-bottom: 30px; }
+        .summary-box h3 { margin-bottom: 15px; font-size: 1.2rem; }
+        .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .summary-item { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; text-align: center; }
+        .summary-item .label { font-size: 0.8rem; opacity: 0.85; }
+        .summary-item .value { font-size: 1.1rem; font-weight: 700; color: #C8E6C9; }
+        
+        h2 { color: #2E7D32; font-size: 1.3rem; margin: 25px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #81C784; }
+        h3 { color: #388E3C; font-size: 1.1rem; margin: 20px 0 10px; }
+        
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9rem; }
+        th { background: #2E7D32; color: white; padding: 10px; text-align: right; }
+        td { padding: 10px; border-bottom: 1px solid #e0e0e0; }
+        tr:nth-child(even) { background: #E8F5E9; }
+        tr.total { background: #2E7D32; color: white; font-weight: 700; }
+        
+        .box { padding: 15px; border-radius: 10px; margin: 15px 0; }
+        .box-green { background: #E8F5E9; border-right: 4px solid #4CAF50; }
+        .box-yellow { background: #FFF8E1; border-right: 4px solid #FFB300; }
+        .box-blue { background: #E3F2FD; border-right: 4px solid #2196F3; }
+        
+        .calc-box { background: #263238; color: #81C784; padding: 20px; border-radius: 10px; margin: 20px 0; font-family: monospace; }
+        .calc-box .result { color: #FFB300; font-size: 1.2rem; font-weight: 700; }
+        
+        .step { display: flex; align-items: flex-start; gap: 15px; margin: 15px 0; }
+        .step-num { width: 35px; height: 35px; background: #2E7D32; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+        .step-content { flex: 1; }
+        
+        ul { padding-right: 20px; }
+        li { margin: 8px 0; }
+        
+        .emoji { font-size: 1.2rem; margin-left: 5px; }
+        
+        .footer { background: #263238; color: white; text-align: center; padding: 20px; }
+        
+        @media print { .container { box-shadow: none; } }
+        @media (max-width: 600px) { .summary-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌿 دراسة جدوى مشروع صغير</h1>
+            <h2>إنتاج الفحم النشط من نواة الزيتون - أيت أورير</h2>
+            <div class="badge">مشروع أول / ميزانية محدودة</div>
+        </div>
+
+        <div class="content">
+            <div class="summary-box">
+                <h3>⚡ ملخص سريع</h3>
+                <div class="summary-grid">
+                    <div class="summary-item"><div class="label">رأس المال</div><div class="value">80,000 - 150,000 د</div></div>
+                    <div class="summary-item"><div class="label">الإنتاج الشهري</div><div class="value">2-3 طن</div></div>
+                    <div class="summary-item"><div class="label">الربح الشهري</div><div class="value">15,000 - 35,000 د</div></div>
+                    <div class="summary-item"><div class="label">العمالة</div><div class="value">2-3 أشخاص</div></div>
+                    <div class="summary-item"><div class="label">استرداد رأس المال</div><div class="value">5-8 أشهر</div></div>
+                    <div class="summary-item"><div class="label">هامش الربح</div><div class="value">60-70%</div></div>
+                </div>
+            </div>
+
+            <h2>1. المنتج والأسعار 📦</h2>
+            <table>
+                <tr><th>المنتج</th><th>سعر الجملة</th><th>سعر التجزئة</th></tr>
+                <tr><td>فحم نشط حبيبي (كغ)</td><td>18 درهم</td><td>25 درهم</td></tr>
+                <tr><td>فحم نشط مسحوق (كغ)</td><td>15 درهم</td><td>22 درهم</td></tr>
+                <tr><td>فحم تجميلي (كغ)</td><td>30 درهم</td><td>50 درهم</td></tr>
+                <tr><td>كيس 25 كغ</td><td>400 درهم</td><td>-</td></tr>
+            </table>
+
+            <h2>2. من سيشتري منك؟ 🎯</h2>
+            <div class="box box-green">
+                <ul>
+                    <li><strong>محلات بيع الفلاتر</strong> - الدار البيضاء، مراكش</li>
+                    <li><strong>صيدليات ومحلات العطارة</strong> - محلياً وإقليمياً</li>
+                    <li><strong>محلات مستحضرات التجميل</strong> - للأقنعة ومعاجين الأسنان</li>
+                    <li><strong>مربو الدواجن</strong> - كمكمل غذائي</li>
+                    <li><strong>البيع عبر الإنترنت</strong> - فيسبوك، إنستغرام</li>
+                </ul>
+            </div>
+
+            <h2>3. المواد الخام 🌿</h2>
+            <table>
+                <tr><th>المادة</th><th>الكمية الشهرية</th><th>التكلفة</th></tr>
+                <tr><td>نواة الزيتون</td><td>8-10 طن</td><td>مجانية - 3,000 درهم</td></tr>
+                <tr><td>مواد كيميائية</td><td>50-80 كغ</td><td>500-800 درهم</td></tr>
+                <tr><td>غاز البوتان</td><td>10-15 قنينة</td><td>1,500-2,500 درهم</td></tr>
+            </table>
+            <div class="box box-yellow">
+                <strong>💡 نصيحة:</strong> النوى متوفرة مجاناً من المعاصر خلال الموسم (نوفمبر-فبراير). خزّن كمية تكفي السنة!
+            </div>
+
+            <h2>4. المعدات المطلوبة 🔧</h2>
+            <table>
+                <tr><th>المعدة</th><th>السعر (درهم)</th></tr>
+                <tr><td>فرن تفحيم (برميل معدل أو محلي الصنع)</td><td>3,000 - 8,000</td></tr>
+                <tr><td>فرن تنشيط (فرن غاز صناعي)</td><td>8,000 - 15,000</td></tr>
+                <tr><td>مطحنة كهربائية صغيرة</td><td>5,000 - 10,000</td></tr>
+                <tr><td>غرابيل (مناخل) مختلفة الأحجام</td><td>500 - 1,500</td></tr>
+                <tr><td>ميزان رقمي 100 كغ</td><td>800 - 1,500</td></tr>
+                <tr><td>أحواض غسيل + أدوات يدوية</td><td>2,000 - 3,500</td></tr>
+                <tr class="total"><td>الإجمالي</td><td>19,300 - 39,500</td></tr>
+            </table>
+            <div class="box box-blue">
+                <strong>💰 وفّر المال:</strong> ابحث عن معدات مستعملة في أفيتو أو اطلب من حداد محلي صنع الأفران
+            </div>
+
+            <h2>5. التكاليف الشهرية 💸</h2>
+            <table>
+                <tr><th>البند</th><th>الحد الأدنى</th><th>الحد الأقصى</th></tr>
+                <tr><td>نواة الزيتون</td><td>0</td><td>3,000</td></tr>
+                <tr><td>مواد كيميائية</td><td>500</td><td>1,000</td></tr>
+                <tr><td>غاز</td><td>1,500</td><td>2,500</td></tr>
+                <tr><td>كهرباء + ماء</td><td>500</td><td>1,000</td></tr>
+                <tr><td>إيجار (إذا لزم)</td><td>0</td><td>2,500</td></tr>
+                <tr><td>تعبئة ونقل</td><td>1,000</td><td>2,000</td></tr>
+                <tr><td>عامل مساعد (اختياري)</td><td>0</td><td>3,000</td></tr>
+                <tr class="total"><td>الإجمالي</td><td>4,000</td><td>15,000</td></tr>
+            </table>
+
+            <h2>6. حساب الربح 📊</h2>
+            <div class="calc-box">
+                <p>═══════════════════════════════════════════</p>
+                <p><strong>الإنتاج الشهري:</strong> 2,000 كغ</p>
+                <p><strong>سعر البيع المتوسط:</strong> 20 درهم/كغ</p>
+                <p>───────────────────────────────────────────</p>
+                <p><strong>الإيرادات:</strong> 2,000 × 20 = <span class="result">40,000 درهم</span></p>
+                <p><strong>التكاليف:</strong> <span class="result">12,500 درهم</span></p>
+                <p>═══════════════════════════════════════════</p>
+                <p><strong>صافي الربح:</strong> <span class="result">27,500 درهم/شهر</span></p>
+                <p>═══════════════════════════════════════════</p>
+            </div>
+
+            <h3>ملخص الربح حسب حجم الإنتاج:</h3>
+            <table>
+                <tr><th>الإنتاج اليومي</th><th>الإنتاج الشهري</th><th>الربح الشهري</th></tr>
+                <tr><td>50 كغ</td><td>1,250 كغ</td><td>15,000 - 18,000 درهم</td></tr>
+                <tr><td>80 كغ</td><td>2,000 كغ</td><td>24,000 - 28,000 درهم</td></tr>
+                <tr><td>100 كغ</td><td>2,500 كغ</td><td>30,000 - 38,000 درهم</td></tr>
+            </table>
+
+            <h2>7. تكلفة إنتاج 1 كغ 🔢</h2>
+            <div class="box box-green">
+                <table>
+                    <tr><th>البند</th><th>التكلفة</th></tr>
+                    <tr><td>نوى (4-5 كغ)</td><td>1-2 درهم</td></tr>
+                    <tr><td>غاز</td><td>2-3 درهم</td></tr>
+                    <tr><td>كهرباء</td><td>0.5 درهم</td></tr>
+                    <tr><td>كيميائيات</td><td>0.5-1 درهم</td></tr>
+                    <tr class="total"><td><strong>تكلفة 1 كغ</strong></td><td><strong>4-6 دراهم</strong></td></tr>
+                    <tr><td>سعر البيع</td><td>18-22 درهم</td></tr>
+                    <tr style="background: #C8E6C9;"><td><strong>الربح لكل 1 كغ</strong></td><td><strong>12-16 درهم</strong></td></tr>
+                </table>
+            </div>
+
+            <h2>8. ميزانية البدء 💰</h2>
+            
+            <h3>الخيار 1: ميزانية اقتصادية</h3>
+            <table>
+                <tr><th>البند</th><th>المبلغ</th></tr>
+                <tr><td>فرن تفحيم (محلي)</td><td>5,000</td></tr>
+                <tr><td>فرن تنشيط (مستعمل)</td><td>10,000</td></tr>
+                <tr><td>مطحنة + أدوات</td><td>10,000</td></tr>
+                <tr><td>تجهيز المكان</td><td>5,000</td></tr>
+                <tr><td>مخزون أولي</td><td>5,000</td></tr>
+                <tr><td>رأس مال عامل (3 أشهر)</td><td>30,000</td></tr>
+                <tr><td>احتياطي</td><td>15,000</td></tr>
+                <tr class="total"><td>الإجمالي</td><td>80,000 درهم</td></tr>
+            </table>
+
+            <h3>الخيار 2: ميزانية متوسطة</h3>
+            <table>
+                <tr><th>البند</th><th>المبلغ</th></tr>
+                <tr><td>أفران (جديدة)</td><td>30,000</td></tr>
+                <tr><td>معدات أخرى</td><td>20,000</td></tr>
+                <tr><td>تجهيز المكان + إيجار</td><td>20,000</td></tr>
+                <tr><td>مخزون أولي</td><td>10,000</td></tr>
+                <tr><td>رأس مال عامل</td><td>45,000</td></tr>
+                <tr><td>احتياطي</td><td>25,000</td></tr>
+                <tr class="total"><td>الإجمالي</td><td>150,000 درهم</td></tr>
+            </table>
+
+            <h2>9. خطوات البدء 🚀</h2>
+            
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <strong>الشهر الأول - التحضير</strong>
+                    <p>زيارة المعاصر، الاتفاق على التوريد، البحث عن مكان مناسب</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <strong>الشهر الثاني - التجهيز</strong>
+                    <p>شراء/صنع المعدات، تجهيز المكان، شراء المواد الأولية</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <strong>الشهر الثالث - التجارب</strong>
+                    <p>تجارب التفحيم والتنشيط، ضبط الجودة، تحديد الأسعار</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                    <strong>الشهر الرابع - الانطلاق</strong>
+                    <p>الإنتاج الفعلي، التغليف، البدء في البيع</p>
+                </div>
+            </div>
+
+            <h2>10. نصائح مهمة ⭐</h2>
+            
+            <div class="box box-green">
+                <h3>✅ افعل:</h3>
+                <ul>
+                    <li>ابدأ صغيراً ولا تستثمر كل المال دفعة واحدة</li>
+                    <li>تعلم العملية جيداً قبل الإنتاج الكبير</li>
+                    <li>خزّن النوى في الموسم (نوفمبر-فبراير)</li>
+                    <li>اهتم بالجودة - السمعة أهم من الكمية</li>
+                    <li>استخدم فيسبوك وإنستغرام للتسويق</li>
+                </ul>
+            </div>
+            
+            <div class="box box-yellow">
+                <h3>❌ لا تفعل:</h3>
+                <ul>
+                    <li>لا تشترِ معدات غالية من البداية</li>
+                    <li>لا تستأجر مكاناً كبيراً</li>
+                    <li>لا توظف قبل أن تحتاج فعلاً</li>
+                    <li>لا تبيع بالدين في البداية</li>
+                    <li>لا تهمل السلامة - الأفران خطيرة</li>
+                </ul>
+            </div>
+
+            <h2>11. الخلاصة ✅</h2>
+            
+            <div class="summary-box">
+                <h3>🎯 هل المشروع مربح؟ نعم!</h3>
+                <div class="summary-grid">
+                    <div class="summary-item"><div class="label">الاستثمار</div><div class="value">80,000-150,000 د</div></div>
+                    <div class="summary-item"><div class="label">الربح الشهري</div><div class="value">15,000-35,000 د</div></div>
+                    <div class="summary-item"><div class="label">الاسترداد</div><div class="value">5-8 أشهر</div></div>
+                </div>
+                <p style="margin-top: 15px; text-align: center;">
+                    ✅ المادة الخام متوفرة ورخيصة<br>
+                    ✅ الطلب متزايد<br>
+                    ✅ هامش الربح جيد (60-70%)<br>
+                    ✅ يمكن البدء برأس مال محدود
+                </p>
+            </div>
+
+            <div class="box box-blue" style="text-align: center;">
+                <h3>📝 خطوتك القادمة</h3>
+                <p>1. زُر 3-5 معاصر واتفق على التوريد</p>
+                <p>2. زُر محلات الفلاتر وتعرف على الأسعار</p>
+                <p>3. حدد المكان المناسب للورشة</p>
+                <p>4. ابدأ بشراء المعدات الأساسية</p>
+                <p style="font-size: 1.5rem; margin-top: 15px;">🚀 انطلق!</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>بالتوفيق في مشروعك! 🌿</strong></p>
+            <p>يناير 2026</p>
+        </div>
+    </div>
+</body>
+</html>
+
